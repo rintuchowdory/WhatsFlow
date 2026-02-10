@@ -1,0 +1,26 @@
+# Environment files
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# OS / editor junk
+.DS_Store
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Docker
+docker-compose.yml
+
+# Secrets
+*.key
+*.pem
