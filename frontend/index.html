@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsFlow Dashboard</title>
+
+  <!-- Google Font (optional, makes it modern) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+
+  <style>
+    /* =======================
+       Body & Container
+       ======================= */
+    body {
+      background: #12141d;       /* Dark background */
+      font-family: 'Inter', sans-serif;
+      padding: 12px;             /* Mobile-friendly padding */
+    }
+
+    .container {
+      max-width: 420px;          /* Centered card width */
+      margin: 40px auto;
+      background: #1f2333;       /* Card background */
+      border-radius: 14px;       /* Rounded corners */
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Shadow for depth */
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin-top: 20px;
+      }
+    }
+
+    /* =======================
+       Title & Subtitle
+       ======================= */
+    h1 {
+      color: #ff6b6b;
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      color: #9aa0b3;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    /* =======================
+       Table styling
+       ======================= */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      font-size: 13px;
+      color: #c0c0c0;
+    }
+
+    th {
+      color: #ff6b6b;
+      font-weight: 600;
+      border-bottom: 1px solid #2c2f41;
+    }
+
+    /* =======================
+       Status Badges
+       ======================= */
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .badge-success {
+      background: rgba(46, 204, 113, 0.15);
+      color: #2ecc71;
+    }
+
+    .badge-running {
+      background: rgba(241, 196, 15, 0.15);
+      color: #f1c40f;
+    }
+
+    .badge-failed {
+      background: rgba(231, 76, 60, 0.15);
+      color: #e74c3c;
+    }
+
+    /* =======================
+       System Status Section
+       ======================= */
+    h2 {
+      color: #ff6b6b;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 4px 0;
+      color: #c0c0c0;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header / Branding -->
+    <h1>⚡ WhatsFlow</h1>
+    <p class="subtitle">WhatsApp Automation Dashboard</p>
+
+    <!-- Status Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Status</th>
+          <th>Last Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bot Started</td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>2026-02-10 13:17</td>
+        </tr>
+        <tr>
+          <td>Listening to messages</td>
+          <td><span class="badge badge-running">Running</span></td>
+          <td>2026-02-10 13:18</td>
+        </tr>
+        <tr>
+          <td>Database Sync</td>
+          <td><span class="badge badge-failed">Failed</span></td>
+          <td>2026-02-10 13:15</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <!-- System Status Section -->
+  <h2>System Status</h2>
+  <ul>
+    <li>API: <span class="badge badge-success">Online</span></li>
+    <li>Environment: Docker</li>
+    <li>Mode: Development</li>
+  </ul>
+</div>
+
+     <!-- ✅ Auto refresh script (ADD IT HERE) -->
+  <script>
+    setTimeout(() => {
+    window.location.reload();
+    }, 5000);
+  </script>
+
+ </body>
+</html>
+
