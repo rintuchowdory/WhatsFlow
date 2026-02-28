@@ -24,3 +24,4 @@ docker-compose.yml
 # Secrets
 *.key
 *.pem
+app/whatsflow.db
